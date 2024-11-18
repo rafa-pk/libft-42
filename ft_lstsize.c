@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/17 18:25:24 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/11/17 18:25:36 by raica-ba         ###   ########.fr       */
+/*   Created: 2024/11/17 18:22:59 by raica-ba          #+#    #+#             */
+/*   Updated: 2024/11/17 18:23:12 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+int	ft_lstsize(t_list *lst)
 {
-	size_t				i;
-	const unsigned char	*str1;
-	const unsigned char	*str2;
+	int		count;
+	t_list	*current_node;
 
-	i = 0;
-	str1 = (const unsigned char *) s1;
-	str2 = (const unsigned char *) s2;
-	while (i < n)
+	count = 0;
+	current_node = lst;
+	if (!lst)
+		return (0);
+	while (current_node != NULL)
 	{
-		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
-		i++;
+		count++;
+		current_node = current_node->next;
 	}
-	return (0);
+	return (count);
 }

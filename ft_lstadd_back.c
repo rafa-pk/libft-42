@@ -1,31 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/17 18:25:24 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/11/17 18:25:36 by raica-ba         ###   ########.fr       */
+/*   Created: 2024/11/17 18:18:54 by raica-ba          #+#    #+#             */
+/*   Updated: 2024/11/17 18:19:10 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-	size_t				i;
-	const unsigned char	*str1;
-	const unsigned char	*str2;
+	t_list	*last_node;
 
-	i = 0;
-	str1 = (const unsigned char *) s1;
-	str2 = (const unsigned char *) s2;
-	while (i < n)
+	if (!new)
+		return ;
+	if (*lst == NULL)
 	{
-		if (str1[i] != str2[i])
-			return (str1[i] - str2[i]);
-		i++;
+		*lst = new;
+		return ;
 	}
-	return (0);
+	last_node = ft_lstlast(*lst);
+	last_node->next = new;
 }
