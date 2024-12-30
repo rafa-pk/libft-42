@@ -6,12 +6,12 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:34:12 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/11/17 18:34:25 by raica-ba         ###   ########.fr       */
+/*   Updated: 2024/12/28 17:30:54 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
+//#include <stdio.h>
 
 size_t	ft_strlcat(char *restrict dest, const char *restrict src,
 		size_t destsize)
@@ -23,6 +23,8 @@ size_t	ft_strlcat(char *restrict dest, const char *restrict src,
 	i = 0;
 	dest_len = 0;
 	src_len = ft_strlen(src);
+	if (!dest && destsize == 0)
+		return (src_len);
 	while (dest[dest_len] != '\0' && dest_len < destsize)
 		dest_len++;
 	if (destsize <= dest_len)

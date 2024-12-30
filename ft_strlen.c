@@ -6,11 +6,11 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:35:13 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/11/17 18:35:25 by raica-ba         ###   ########.fr       */
+/*   Updated: 2024/12/27 16:22:31 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libt.h"
+#include "libft.h"
 
 size_t	ft_strlen(const char *str)
 {

@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:41:34 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/11/17 18:41:48 by raica-ba         ###   ########.fr       */
+/*   Updated: 2024/12/27 16:24:42 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
-size_t	ft_strlcpy(char *dest, char *src, size_t len);
+size_t	ft_strlcpy(char *dest, const char *src, size_t len);
 size_t	ft_strlcat(char *restrict dest, const char *restrict src,
 			size_t destsize);
 size_t	ft_strlen(const char *str);
 int		ft_atoi(const char *str);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
-char	*ft_strdup(char *src);
+char	*ft_strdup(const char *src);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -52,7 +52,7 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-char	*ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);

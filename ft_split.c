@@ -6,13 +6,13 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:30:41 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/11/17 18:31:25 by raica-ba         ###   ########.fr       */
+/*   Updated: 2024/12/27 16:31:03 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static size_t	word_count(char const *s, char c)
+static size_t	word_count(char const *s, char const c)
 {
 	size_t	i;
 	int		word;
@@ -35,7 +35,7 @@ static size_t	word_count(char const *s, char c)
 	return (count);
 }
 
-static char	*word_malloc(const char *s, size_t length)
+static char	*word_malloc(char const *s, size_t length)
 {
 	char	*word;
 
