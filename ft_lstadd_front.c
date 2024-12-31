@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:19:29 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/11/17 18:19:41 by raica-ba         ###   ########.fr       */
+/*   Updated: 2024/12/30 23:40:32 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	if (!lst || !new)
-		return (NULL);
+		return ;
 	new->next = *lst;
 	*lst = new;
 }

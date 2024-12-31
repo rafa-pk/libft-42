@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:39:14 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/11/17 18:39:34 by raica-ba         ###   ########.fr       */
+/*   Updated: 2024/12/30 21:17:30 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (NULL);
 	start = 0;
 	end = ft_strlen(s1);
-	while (s1[start] != '\0' && strchr(set, s1[start]))
+	while (s1[start] != '\0' && ft_strchr(set, s1[start]))
 		start++;
-	while (end > start && strchr(set, s1[end - 1]))
+	while (end > start && ft_strchr(set, s1[end - 1]))
 		end--;
 	trim = (char *)malloc(sizeof(char) * (end - start + 1));
 	if (!trim)

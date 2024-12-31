@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:30:41 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/12/27 16:31:03 by raica-ba         ###   ########.fr       */
+/*   Updated: 2024/12/31 13:32:37 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,12 +46,37 @@ static char	*word_malloc(char const *s, size_t length)
 	return (word);
 }
 
+static int	word_to_table(char **table, char const *s, char c, size_t *i, size_t *j)
+{
+	size_t		lenght;
+	const char	*start;
+
+	while (s[*i] != '\0')
+	{
+		if (s[*i] != c)
+		{
+			start = &s[*i];
+			lenght = 0;
+			while (s[*i] != c && s[*i] != '\0')
+			{
+				lenght++;
+				(*i)++;
+			}
+			table[*j] = word_malloc(start, lenght);
+			if (!table[*j])
+				return (1);
+			(*j)++;
+		}
+		else
+			(*i)++;
+	}
+	return (0);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	size_t		i;
 	size_t		j;
-	size_t		length;
-	const char	*start;
 	char		**table;
 
 	if (!s)
@@ -61,28 +86,12 @@ char	**ft_split(char const *s, char c)
 	table = (char **)malloc(sizeof(char *) * (word_count(s, c) + 1));
 	if (!table)
 		return (NULL);
-	while (s[i] != '\0')
+	if (word_to_table(table, s, c, &i, &j))
 	{
-		if (s[i] != c)
-		{
-			start = &s[i];
-			length = 0;
-			while (s[i] != c && s[i] != '\0')
-			{
-				length++;
-				i++;
-			}
-			table[j++] = word_malloc(start, length);
-			if (!table[j - 1])
-			{
-				while (j > 0)
-					free(table[--j]);
-				free(table);
-				return (NULL);
-			}
-		}
-		else
-			i++;
+		while (j > 0)
+			free(table[--j]);
+		free(table);
+		return (NULL);
 	}
 	table[j] = NULL;
 	return (table);

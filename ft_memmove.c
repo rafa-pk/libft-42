@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:26:30 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/12/28 18:04:49 by raica-ba         ###   ########.fr       */
+/*   Updated: 2024/12/31 11:52:15 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,8 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (NULL);
 	if (dest > source)
 	{
-		while (len > 0)
-		{
-			dest[len - 1] = source[len - 1];
-			len--;
-		}
+		while (len--)
+			dest[len] = source[len];
 	}
 	else
 	{

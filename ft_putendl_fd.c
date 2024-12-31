@@ -1,27 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_putndl_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: raica-ba <raica-ba@student.42lisboa.c      +#+  +:+       +#+        */
+/*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/28 18:13:40 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/12/30 20:21:08 by raica-ba         ###   ########.fr       */
+/*   Created: 2024/11/17 18:29:20 by raica-ba          #+#    #+#             */
+/*   Updated: 2024/11/17 18:29:34 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_putendl_fd(char *s, int fd)
 {
-	t_list	*node;
-
-	node = lst;
-	if (!lst || !f)
+	if (!s)
 		return ;
-	while (node != NULL)
-	{
-		f(node->content);
-		node = node->next;
-	}
+	write(fd, s, ft_strlen(s));
+	write(fd, "\n", 1);
 }
