@@ -6,11 +6,12 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:30:41 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/12/31 13:32:37 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/03 13:45:45 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static size_t	word_count(char const *s, char const c)
 {
@@ -46,11 +47,13 @@ static char	*word_malloc(char const *s, size_t length)
 	return (word);
 }
 
-static int	word_to_table(char **table, char const *s, char c, size_t *i, size_t *j)
+static int	word_to_table(char **table, char const *s, char c, size_t *i)
 {
+	size_t		j;
 	size_t		lenght;
 	const char	*start;
 
+	j = 0;
 	while (s[*i] != '\0')
 	{
 		if (s[*i] != c)
@@ -62,14 +65,14 @@ static int	word_to_table(char **table, char const *s, char c, size_t *i, size_t 
 				lenght++;
 				(*i)++;
 			}
-			table[*j] = word_malloc(start, lenght);
-			if (!table[*j])
+			table[j++] = word_malloc(start, lenght);
+			if (!table[j - 1])
 				return (1);
-			(*j)++;
 		}
 		else
 			(*i)++;
 	}
+	table[j] = NULL;
 	return (0);
 }
 
@@ -86,13 +89,38 @@ char	**ft_split(char const *s, char c)
 	table = (char **)malloc(sizeof(char *) * (word_count(s, c) + 1));
 	if (!table)
 		return (NULL);
-	if (word_to_table(table, s, c, &i, &j))
+	if (word_to_table(table, s, c, &i))
 	{
 		while (j > 0)
 			free(table[--j]);
 		free(table);
 		return (NULL);
 	}
-	table[j] = NULL;
 	return (table);
 }
+/*
+int	main(void)
+{
+	char const	*s;
+	char		c;
+	char		**result;
+	size_t		i;
+
+	s = "coco,   ,  cocoooo )(/, ?6 copco,, coco, co,cco";
+	c = ',';
+	i = 0;
+	result = ft_split(s, c);
+	if (!result)
+	{
+		printf("Memory allocation failed\n");
+		return (1);
+	}
+	while (result[i] != NULL)
+	{
+		printf("Word %zu: %s\n", i, result[i]);
+		free(result[i]);
+		i++;
+	}
+	free(result);
+	return (0);
+}*/
