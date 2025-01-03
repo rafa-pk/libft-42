@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:18:17 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/02 14:05:32 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:32:11 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ static int	int_len(int n)
 	return (len);
 }
 
-char	*conversion_cases(int n, char *conversion, int neg, int len)
+static char	*conversion_cases(int n, char *conversion, int neg, int len)
 {
 	if (n == 0)
 	{

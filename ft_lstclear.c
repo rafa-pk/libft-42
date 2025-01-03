@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/28 18:13:04 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/12/30 11:42:08 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:40:40 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_lstclear(t_list **lst, void (*del)(void *))
 
 	node = *lst;
 	next = NULL;
-	if (!lst || !del)
+	if (!lst || !*lst || !del)
 		return ;
 	while (node != NULL)
 	{

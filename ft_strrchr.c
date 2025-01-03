@@ -6,11 +6,11 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:37:34 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/11/17 18:38:59 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/03 14:37:05 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strleng(const char *str)
+static int	ft_strleng(const char *str)
 {
 	int	i;
 
