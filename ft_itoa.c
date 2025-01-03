@@ -6,7 +6,7 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:18:17 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/12/28 17:22:50 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/02 14:05:32 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,8 @@ static int	int_len(int n)
 	return (len);
 }
 
-char	*ft_itoa(int n)
+char	*conversion_cases(int n, char *conversion, int neg, int len)
 {
-	int		len;
-	int		neg;
-	char	*conversion;
-
-	len = int_len(n);
-	neg = (n < 0);
-	conversion = (char *)malloc(sizeof(char) * (len + 1));
-	if (!conversion)
-		return (NULL);
-	conversion[len] = '\0';
 	if (n == 0)
 	{
 		conversion[0] = '0';
@@ -58,5 +48,21 @@ char	*ft_itoa(int n)
 	}
 	if (neg)
 		conversion[0] = '-';
+	return (conversion);
+}
+
+char	*ft_itoa(int n)
+{
+	int		len;
+	int		neg;
+	char	*conversion;
+
+	len = int_len(n);
+	neg = (n < 0);
+	conversion = (char *)malloc(sizeof(char) * (len + 1));
+	if (!conversion)
+		return (NULL);
+	conversion[len] = '\0';
+	conversion_cases(n, conversion, neg, len);
 	return (conversion);
 }
