@@ -6,11 +6,12 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:18:17 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/03 14:32:11 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/03 16:56:43 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 static int	int_len(int n)
 {
@@ -66,3 +67,12 @@ char	*ft_itoa(int n)
 	conversion_cases(n, conversion, neg, len);
 	return (conversion);
 }
+/*
+int	main(void)
+{
+	int	n;
+
+	n = 97382;
+	printf("before itoa: %d\n after itoa: %s\n", n, ft_itoa(n));
+	return (0);
+}*/

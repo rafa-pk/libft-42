@@ -6,11 +6,12 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:25:53 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/12/28 18:02:20 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/03 17:44:43 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
@@ -30,3 +31,15 @@ void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 	}
 	return (dst);
 }
+/*
+int	main(void)
+{
+	unsigned char	dst[41];
+	unsigned char	src[] = "raicaba@student.42lisboa.com";
+	size_t			n = 8;
+
+	printf("src b4: %s\n dst b4: %s\n", src, dst);
+	printf("src after: %s\n dst after: %s\n", 
+	src, (unsigned char *)ft_memcpy(dst, src, n));
+	return (0);
+}*/

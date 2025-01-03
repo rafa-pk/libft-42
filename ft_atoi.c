@@ -6,9 +6,11 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 17:55:58 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/12/28 18:21:29 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/03 15:55:34 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int	ft_atoi(const char *str)
 {
@@ -35,3 +37,13 @@ int	ft_atoi(const char *str)
 	}
 	return (nb * sinal);
 }
+/*
+int	main(int argc, char *argv[])
+{
+	const char	*str;
+
+	str = argv[1];
+	(void)argc;
+	printf("char: %s\n int: %d\n", str, ft_atoi(str));
+	return (0);
+}*/

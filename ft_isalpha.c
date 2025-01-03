@@ -6,9 +6,11 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:00:17 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/11/17 18:00:32 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/03 16:39:44 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 int	ft_isalpha(int c)
 {
@@ -17,3 +19,12 @@ int	ft_isalpha(int c)
 	else
 		return (0);
 }
+/*
+int	main(void)
+{
+	int	c;
+
+	c = 'b';
+	printf("is alpha? %d\n", ft_isalpha(c));
+	return (0);
+}*/
