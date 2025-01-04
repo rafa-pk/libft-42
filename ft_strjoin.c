@@ -6,11 +6,12 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:33:36 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/11/17 18:33:53 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/04 00:30:59 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
@@ -40,3 +41,15 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	merge[i + j] = '\0';
 	return (merge);
 }
+/*
+int	main(int argc, char const *argv[])
+{
+	char const	*s1;
+	char const	*s2;
+
+	s1 = argv[1];
+	s2 = argv[2];
+	(void)argc;
+	printf("joint str: %s\n", ft_strjoin(s1, s2));
+	return (0);
+}*/

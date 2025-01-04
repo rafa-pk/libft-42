@@ -6,9 +6,12 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:37:34 by raica-ba          #+#    #+#             */
-/*   Updated: 2025/01/03 14:37:05 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/04 01:13:03 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
+#include <string.h>
 
 static int	ft_strleng(const char *str)
 {
@@ -38,3 +41,13 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (0);
 }
+/*
+int	main(void)
+{
+	const char	*s = "bskjdbosu";
+	int			c = '\0';
+
+	printf("og funct: %s\n", strrchr(s, c));
+	printf("ma funct: %s\n", ft_strrchr(s, c));
+	return (0);
+}*/

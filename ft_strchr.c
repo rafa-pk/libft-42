@@ -6,9 +6,11 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:32:10 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/11/17 18:32:24 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/03 20:53:47 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -27,3 +29,12 @@ char	*ft_strchr(const char *s, int c)
 		return ((char *)&s[i]);
 	return (0);
 }
+/*
+int	main(void)
+{
+	const char	s[] = "yoyoyo my mannn";
+	int			c = '\0';
+
+	printf("here it is: %s\n", ft_strchr(s, c));
+	return (0);
+}*/

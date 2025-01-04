@@ -6,11 +6,12 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:39:14 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/12/30 21:17:30 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/04 01:21:55 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
@@ -32,3 +33,18 @@ char	*ft_strtrim(char const *s1, char const *set)
 	ft_strlcpy(trim, s1 + start, end - start + 1);
 	return (trim);
 }
+/*
+int	main(int argc, char const *argv[])
+{
+	char const *s1 = argv[1];
+	char const *set = argv[2];
+	char		*result = ft_strtrim(s1, set);
+	(void)argc;
+
+	if (result)
+	{
+		printf("trimmed str: %s\n", ft_strtrim(s1, set));
+		free(result);
+	}
+	return (0);
+}*/

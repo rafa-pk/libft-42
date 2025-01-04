@@ -6,11 +6,12 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:36:08 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/12/28 17:42:58 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/04 01:00:21 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
@@ -29,3 +30,14 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	return (0);
 }
+/*
+int	main(void)
+{
+	const char	*s1 = "brobrobr";
+	const char	*s2 = "brobrobo";
+	size_t		n = 8;
+
+	printf("og funct: %d\n", strncmp(s1, s2, n));
+	printf("ma funct: %d\n", ft_strncmp(s1, s2, n));
+	return (0);
+}*/

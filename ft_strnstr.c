@@ -6,11 +6,12 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:36:42 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/11/17 18:36:56 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/04 01:05:09 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
@@ -35,3 +36,14 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
+/*
+int	main(void)
+{
+	const char	*haystack = "skjbns.pwei";
+	const char	*needle = ".";
+	size_t		len = 8;
+
+	printf("og funct: %s\n", strnstr(haystack, needle, len));
+	printf("ma funct: %s\n", ft_strnstr(haystack, needle, len));
+	return (0);
+}*/

@@ -6,11 +6,12 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:26:30 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/12/31 11:52:15 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/03 20:44:22 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
@@ -38,3 +39,16 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	return (dst);
 }
+/*
+int	main(void)
+{
+	unsigned char	dst[50];
+	unsigned char	src[] = "calculadora 
+	frita com gambas e teclado a braz";
+	size_t			len = 45;
+
+	printf("src b4: %s\n dest b4: %s\n", src, dst);
+	printf("src after: %s\n dest after: %s\n", 
+	src, (char *)ft_memmove(dst, src, len));
+	return (0);
+}*/

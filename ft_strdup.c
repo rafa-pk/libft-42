@@ -6,11 +6,12 @@
 /*   By: raica-ba <raica-ba@student.42lisboa.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 18:32:40 by raica-ba          #+#    #+#             */
-/*   Updated: 2024/12/28 18:18:28 by raica-ba         ###   ########.fr       */
+/*   Updated: 2025/01/04 00:08:59 by raica-ba         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strdup(const char *src)
 {
@@ -29,3 +30,13 @@ char	*ft_strdup(const char *src)
 	dest[i] = '\0';
 	return (dest);
 }
+/*
+int	main(int argc, const char *argv[])
+{
+	const char	*src;
+
+	src = argv[1];
+	(void)argc;
+	printf("src: %s\n dest: %s\n", src, ft_strdup(src));
+	return (0);
+}*/
